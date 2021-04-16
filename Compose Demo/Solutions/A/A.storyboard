@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f5X-95-RAA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="rRK-aG-Eaa">
+            <objects>
+                <viewController id="WQq-w7-Qu6" customClass="AViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aSC-9O-ROu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9Y-CR-Pki">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="I'm an editable text field" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="x4K-tj-kI7">
+                                <rect key="frame" x="0.0" y="88" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="zML-hM-24l"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ibc-7J-y3T"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="x4K-tj-kI7" firstAttribute="leading" secondItem="ibc-7J-y3T" secondAttribute="leading" id="37s-rQ-OMl"/>
+                            <constraint firstItem="ibc-7J-y3T" firstAttribute="trailing" secondItem="I9Y-CR-Pki" secondAttribute="trailing" id="47O-ZN-3Qw"/>
+                            <constraint firstItem="I9Y-CR-Pki" firstAttribute="leading" secondItem="ibc-7J-y3T" secondAttribute="leading" id="49f-QS-R8D"/>
+                            <constraint firstItem="I9Y-CR-Pki" firstAttribute="top" secondItem="ibc-7J-y3T" secondAttribute="top" id="Oh6-pb-jbT"/>
+                            <constraint firstItem="ibc-7J-y3T" firstAttribute="trailing" secondItem="x4K-tj-kI7" secondAttribute="trailing" id="USt-ur-qpW"/>
+                            <constraint firstItem="x4K-tj-kI7" firstAttribute="top" secondItem="ibc-7J-y3T" secondAttribute="top" id="hlx-JH-wMn"/>
+                            <constraint firstItem="I9Y-CR-Pki" firstAttribute="bottom" secondItem="ibc-7J-y3T" secondAttribute="bottom" id="vDr-Rl-ZSE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wJe-M7-GN3"/>
+                    <connections>
+                        <outlet property="topViewTopSpaceLayoutConstraint" destination="hlx-JH-wMn" id="mxQ-6k-qjc"/>
+                        <outlet property="webView" destination="I9Y-CR-Pki" id="WnM-kJ-7nr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dwV-d1-RIf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.91304347826099" y="153.34821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="56s-iy-jPZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f5X-95-RAA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zvr-g1-AlK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WQq-w7-Qu6" kind="relationship" relationship="rootViewController" id="3Av-5i-8lP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rif-P8-cQi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="153.34821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

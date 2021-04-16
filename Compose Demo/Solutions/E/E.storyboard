@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TZT-Vd-Ubs">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="JbK-dR-5Jb">
+            <objects>
+                <viewController id="X92-21-RhG" customClass="EViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Of-4a-qVT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="855-p2-JcH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Gcb-Ns-Ei3">
+                                <rect key="frame" x="0.0" y="88" width="414" height="136"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="I'm an editable text field 1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8yW-o6-Du9">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="I'm an editable text field 2" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="njD-o0-QB7">
+                                        <rect key="frame" x="0.0" y="34" width="414" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="I'm an editable text field 3" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xjw-FU-U3i">
+                                        <rect key="frame" x="0.0" y="68" width="414" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="I'm an editable text field 4" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r6q-8l-YDg">
+                                        <rect key="frame" x="0.0" y="102" width="414" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JnM-oV-n2u"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="855-p2-JcH" firstAttribute="leading" secondItem="JnM-oV-n2u" secondAttribute="leading" id="00P-YD-1fJ"/>
+                            <constraint firstItem="Gcb-Ns-Ei3" firstAttribute="leading" secondItem="JnM-oV-n2u" secondAttribute="leading" id="1M4-YY-kP5"/>
+                            <constraint firstItem="855-p2-JcH" firstAttribute="bottom" secondItem="JnM-oV-n2u" secondAttribute="bottom" id="4Df-Bp-38c"/>
+                            <constraint firstItem="Gcb-Ns-Ei3" firstAttribute="top" secondItem="JnM-oV-n2u" secondAttribute="top" id="UgR-yD-v0F"/>
+                            <constraint firstItem="855-p2-JcH" firstAttribute="top" secondItem="JnM-oV-n2u" secondAttribute="top" id="h73-g2-Z7i"/>
+                            <constraint firstItem="JnM-oV-n2u" firstAttribute="trailing" secondItem="Gcb-Ns-Ei3" secondAttribute="trailing" id="tHQ-he-lQJ"/>
+                            <constraint firstItem="JnM-oV-n2u" firstAttribute="trailing" secondItem="855-p2-JcH" secondAttribute="trailing" id="zCj-oe-e2V"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wqj-jv-Gk1">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="TU6-lr-7rP">
+                            <connections>
+                                <action selector="handleAddButton:" destination="X92-21-RhG" id="yww-cJ-lME"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="topStackView" destination="Gcb-Ns-Ei3" id="5Rw-ZH-ePS"/>
+                        <outlet property="topStackViewTopSpaceLayoutConstraint" destination="UgR-yD-v0F" id="87o-nQ-0la"/>
+                        <outlet property="webView" destination="855-p2-JcH" id="H2J-MT-GwA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h6T-el-wvd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.91304347826099" y="153.34821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="24Y-ac-yxM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TZT-Vd-Ubs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WCM-i2-SpD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="X92-21-RhG" kind="relationship" relationship="rootViewController" id="lG3-49-0fG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fMG-Zx-3wX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="153.34821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
